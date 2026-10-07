@@ -25,6 +25,10 @@ export const router = createBrowserRouter([
         element: <Posts />,
       },
       {
+        path: "/my-posts",
+        element: <Posts />,
+      },
+      {
         path: "/albums",
         element: <Albums />,
       },
