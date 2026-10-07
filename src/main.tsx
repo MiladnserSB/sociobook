@@ -11,6 +11,7 @@ import Todos from "./pages/Todos";
 
 import MainLayout from "./layout/MainLayout";
 import { UserProvider } from "./context/UserContext";
+import MyPosts from "./pages/MyPosts";
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/my-posts",
-        element: <Posts />,
+        element: <MyPosts />,
       },
       {
         path: "/albums",

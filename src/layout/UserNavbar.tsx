@@ -15,12 +15,14 @@ const UserNavbar = () => {
             </Button>
           )}
         </NavLink>
+        
         <NavLink to="/my-posts">
           
           {({ isActive }) => (
             <Button variant={isActive ? "default" : "ghost"}> My Posts </Button>
           )}
         </NavLink>
+
         <NavLink to="/albums">
           
           {({ isActive }) => (

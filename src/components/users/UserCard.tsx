@@ -2,15 +2,11 @@ import { useContext } from "react";
 import { Link } from "react-router";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import UserCardContent from "./UserCardContent";
-import type { User } from "./UserList";
 import { userContext } from "../../context/UserContext";
 
-type UserCardProps = {
-  user: User;
-};
-
-const UserCard = ({ user }: UserCardProps) => {
+const UserCard = ({ user }) => {
   const { setUserId } = useContext(userContext);
+
 
   return (
     <Link to="/posts" onClick={() => setUserId(user.id)} className="block">
