@@ -1,18 +1,16 @@
 import { createContext, useState } from "react";
-import Users from "./pages/Users";
 
 export const userContext = createContext({
   userId: -1,
-  setUserId: () => {},
+  setUserId: (_userId: number) => {},
 });
 
-const App = () => {
+export const UserProvider = ({ children }: { children }) => {
   const [userId, setUserId] = useState(-1);
+
   return (
     <userContext.Provider value={{ userId, setUserId }}>
-      <Users />
+      {children}
     </userContext.Provider>
   );
 };
-
-export default App;
